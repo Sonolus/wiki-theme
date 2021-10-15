@@ -1,0 +1,10 @@
+html {
+    @apply text-sonolus-ui-text-normal;
+    @apply bg-sonolus-main;
+
+    scroll-behavior: smooth;
+}
+
+:root {
+    --nprogress-color: #fff;
+}

@@ -1,0 +1,22 @@
+{
+    "en": {
+        "nav": {
+            "player": "Player",
+            "developer": "Developer"
+        },
+        "notFound": {
+            "description": "The page you are looking for is not here.",
+            "home": "Home"
+        }
+    },
+    "zh-Hans": {
+        "nav": {
+            "player": "玩家",
+            "developer": "开发者"
+        },
+        "notFound": {
+            "description": "您要寻找的页面不在这里哦",
+            "home": "主页"
+        }
+    }
+}

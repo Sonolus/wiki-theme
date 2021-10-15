@@ -1,0 +1,164 @@
+.markdown {
+    p {
+        @apply leading-relaxed;
+        @apply my-4;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply leading-tight;
+        @apply font-semibold;
+        @apply my-6;
+
+        &:before {
+            content: ' ';
+            @apply block;
+            @apply invisible;
+            @apply h-14;
+            @apply -mt-14;
+            @apply sm:h-20;
+            @apply sm:-mt-20;
+        }
+
+        .header-anchor {
+            @apply float-left;
+            @apply text-rtl;
+            @apply w-0;
+            @apply -ml-2;
+            @apply opacity-0;
+        }
+
+        &:hover,
+        &:focus {
+            .header-anchor {
+                @apply opacity-100;
+            }
+        }
+
+        & > code {
+            @apply bg-sonolus-code;
+        }
+    }
+
+    h1 {
+        @apply text-3xl;
+        @apply sm:text-4xl;
+
+        & > code {
+            @apply px-3;
+            @apply py-2;
+            @apply text-3xl;
+            @apply rounded-lg;
+        }
+    }
+
+    h2 {
+        @apply text-2xl;
+        @apply sm:text-3xl;
+
+        & > code {
+            @apply px-3;
+            @apply py-2;
+            @apply text-2xl;
+            @apply rounded-lg;
+        }
+    }
+
+    h3 {
+        @apply text-xl;
+        @apply sm:text-2xl;
+
+        & > code {
+            @apply px-3;
+            @apply py-2;
+            @apply text-xl;
+            @apply rounded-lg;
+        }
+    }
+
+    h4 {
+        @apply text-lg;
+        @apply sm:text-xl;
+
+        & > code {
+            @apply px-2;
+            @apply py-1;
+            @apply text-lg;
+            @apply rounded-md;
+        }
+    }
+
+    h5 {
+        @apply text-base;
+        @apply sm:text-lg;
+
+        & > code {
+            @apply px-2;
+            @apply py-1;
+            @apply text-base;
+            @apply rounded-md;
+        }
+    }
+
+    h6 {
+        @apply text-base;
+        @apply sm:text-base;
+
+        & > code {
+            @apply px-2;
+            @apply py-1;
+            @apply text-sm;
+            @apply rounded-md;
+        }
+    }
+
+    p > code {
+        @apply px-2;
+        @apply py-1;
+        @apply text-sm;
+        @apply rounded-md;
+        @apply bg-sonolus-code;
+    }
+
+    ul {
+        @apply list-inside;
+        @apply list-disc;
+    }
+
+    ol {
+        @apply list-inside;
+        @apply list-decimal;
+    }
+
+    a:not(.header-anchor) {
+        @apply px-1;
+        @apply transition-colors;
+        @apply duration-200;
+        @apply hover:bg-sonolus-ui-button-highlighted;
+        @apply active:bg-sonolus-ui-button-pressed;
+        @apply underline;
+
+        svg.icon.outbound {
+            @apply ml-1;
+        }
+    }
+
+    div[class*='language-'] {
+        @apply overflow-x-auto;
+        @apply -mx-6;
+        @apply my-4;
+        @apply bg-sonolus-code;
+        @apply sm:mx-0;
+        @apply sm:rounded-md;
+    }
+
+    div[class*='language-'] pre {
+        @apply overflow-x-auto;
+        @apply px-6;
+        @apply py-4;
+    }
+}
