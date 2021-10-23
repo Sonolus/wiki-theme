@@ -134,7 +134,7 @@
         @apply list-decimal;
     }
 
-    a:not(.header-anchor) {
+    :not(.card-list) a:not(.header-anchor) {
         @apply px-1;
         @apply transition-colors;
         @apply duration-200;

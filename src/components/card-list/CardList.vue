@@ -1,5 +1,5 @@
 <template>
-    <div v-if="cards" class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div v-if="cards" class="grid grid-cols-1 gap-4 card-list sm:grid-cols-2">
         <a
             v-for="(card, index) in cards"
             :key="index"
