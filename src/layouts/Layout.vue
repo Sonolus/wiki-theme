@@ -1,6 +1,6 @@
 <template>
     <Navbar
-        sidebar
+        :sidebar="true"
         @toggle-sidebar="toggle('sidebar')"
         @toggle-language="toggle('language')"
     />
