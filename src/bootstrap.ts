@@ -210,6 +210,13 @@ export function bootstrap(options: Partial<BootstrapOptions> = {}): UserConfig {
                 },
             ],
             ['meta', { name: 'theme-color', content: '#000020' }],
+            [
+                'meta',
+                {
+                    property: 'og:image',
+                    content: 'https://wiki.sonolus.com/icon.png',
+                },
+            ],
         ],
 
         locales,
