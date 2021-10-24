@@ -125,13 +125,15 @@
     }
 
     ul {
-        @apply list-inside;
+        @apply list-outside;
         @apply list-disc;
+        @apply pl-6;
     }
 
     ol {
-        @apply list-inside;
+        @apply list-outside;
         @apply list-decimal;
+        @apply pl-6;
     }
 
     :not(.card-list) a:not(.header-anchor) {
