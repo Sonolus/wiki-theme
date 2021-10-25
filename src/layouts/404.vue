@@ -27,9 +27,11 @@
                 :to="localeBasePath"
             >
                 <img
-                    class="h-5 sm:h-6"
+                    class="w-auto h-5 sm:h-6"
                     :src="asset('/home-solid.png')"
                     alt="Home"
+                    width="128"
+                    height="128"
                 />
                 <div
                     class="

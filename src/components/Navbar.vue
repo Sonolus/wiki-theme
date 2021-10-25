@@ -24,13 +24,21 @@
             "
             @click="$emit('toggle-sidebar')"
         >
-            <img class="h-6" :src="asset('/bars-solid.png')" alt="Sidebar" />
+            <img
+                class="w-auto h-6"
+                :src="asset('/bars-solid.png')"
+                alt="Sidebar"
+                width="128"
+                height="128"
+            />
         </button>
         <a class="p-3 sm:p-4" :href="localeBasePath">
             <img
-                class="h-6 sm:h-8"
+                class="w-auto h-6 sm:h-8"
                 :src="asset('/logo.png')"
                 alt="Sonolus Wiki"
+                width="2700"
+                height="360"
             />
         </a>
         <div class="flex-grow hidden sm:block" />
@@ -78,9 +86,11 @@
             @click="$emit('toggle-language')"
         >
             <img
-                class="h-6 sm:h-8"
+                class="w-auto h-6 sm:h-8"
                 :src="asset('/globe-solid.png')"
                 alt="Language"
+                width="128"
+                height="128"
             />
         </button>
     </header>

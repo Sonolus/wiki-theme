@@ -34,9 +34,11 @@
                         @click="$emit('close')"
                     >
                         <img
-                            class="h-5 sm:h-6"
+                            class="w-auto h-5 sm:h-6"
                             :src="asset('/angle-left-solid.png')"
                             alt="Previous"
+                            width="128"
+                            height="128"
                         />
                         <div
                             class="flex-grow mx-1 text-sm sm:mx-2 sm:text-base"
@@ -72,9 +74,11 @@
                             {{ nav.next[0] }}
                         </div>
                         <img
-                            class="h-5 sm:h-6"
+                            class="w-auto h-5 sm:h-6"
                             :src="asset('/angle-right-solid.png')"
                             alt="Next"
+                            width="128"
+                            height="128"
                         />
                     </RouterLink>
                 </nav>

@@ -16,9 +16,11 @@
         @click="scrollToTop"
     >
         <img
-            class="h-4 sm:h-6"
+            class="w-auto h-4 sm:h-6"
             :src="asset('/angle-up-solid.png')"
             alt="Back to Top"
+            width="128"
+            height="128"
         />
     </button>
 </template>
