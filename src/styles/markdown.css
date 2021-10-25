@@ -14,7 +14,7 @@
         @apply font-semibold;
         @apply my-6;
 
-        &:before {
+        &:not(:focus):before {
             content: ' ';
             @apply block;
             @apply invisible;
