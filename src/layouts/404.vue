@@ -61,5 +61,3 @@ const isOpen = ref(false)
 const i18n = useI18n()
 const localeBasePath = useLocaleBasePath()
 </script>
-
-<style src="../styles/index.css" />

@@ -79,7 +79,7 @@ export function bootstrap(options: Partial<BootstrapOptions> = {}): UserConfig {
         ])
     }
 
-    const clientAppEnhanceFiles: string[] = []
+    const clientAppEnhanceFiles = [resolve(__dirname, './styles')]
 
     if (code) {
         clientAppEnhanceFiles.push(resolve(__dirname, './components/code'))

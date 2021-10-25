@@ -33,5 +33,3 @@ function close() {
     overlay.value = undefined
 }
 </script>
-
-<style src="../styles/index.css" />
