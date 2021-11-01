@@ -8,18 +8,20 @@
     >
         <div class="px-6 text-center">
             <p class="text-4xl font-bold sm:text-6xl">404 :(</p>
-            <p class="sm:text-lg">{{ i18n.notFound.description }}</p>
+            <p class="mt-1 sm:mt-2 sm:text-lg">
+                {{ i18n.notFound.description }}
+            </p>
             <RouterLink
                 class="
                     flex
                     items-center
-                    w-24
                     p-1
                     mx-auto
                     mt-8
                     transition-colors
                     duration-200
-                    sm:mt-12 sm:w-32 sm:p-2
+                    w-36
+                    sm:mt-12 sm:w-48 sm:p-2
                     bg-sonolus-ui-button-normal
                     hover:bg-sonolus-ui-button-highlighted
                     active:bg-sonolus-ui-button-pressed
