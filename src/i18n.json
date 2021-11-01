@@ -18,5 +18,45 @@
             "description": "您要寻找的页面不在这里哦",
             "home": "主页"
         }
+    },
+    "zh-Hant": {
+        "nav": {
+            "player": "玩家",
+            "developer": "開發者"
+        },
+        "notFound": {
+            "description": "你要找的頁面不在這裡……",
+            "home": "主頁"
+        }
+    },
+    "ja": {
+        "nav": {
+            "player": "利用者",
+            "developer": "開発者"
+        },
+        "notFound": {
+            "description": "お探しのページは見つかりませんでした。",
+            "home": "トップへ戻る"
+        }
+    },
+    "ko": {
+        "nav": {
+            "player": "플레이어",
+            "developer": "개발자"
+        },
+        "notFound": {
+            "description": "찾으시는 페이지는 여기 없어요.",
+            "home": "홈"
+        }
+    },
+    "id": {
+        "nav": {
+            "player": "Pemain",
+            "developer": "Pengembang"
+        },
+        "notFound": {
+            "description": "Halaman yang Anda cari tidak ada disini.",
+            "home": "Halaman Utama"
+        }
     }
 }
