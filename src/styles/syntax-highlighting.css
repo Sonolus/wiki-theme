@@ -38,6 +38,7 @@
     &.selector,
     &.important,
     &.atrule,
+    &.key,
     &.keyword,
     &.builtin {
         color: #cc99cd;
