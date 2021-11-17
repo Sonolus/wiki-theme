@@ -163,4 +163,29 @@
         @apply px-6;
         @apply py-4;
     }
+
+    table {
+        @apply block;
+        @apply my-4;
+        @apply overflow-x-auto;
+
+        tr {
+            @apply even:bg-sonolus-ui-button-disabled;
+        }
+
+        th {
+            @apply font-semibold;
+        }
+
+        th,
+        td {
+            @apply px-2;
+            @apply py-1;
+            @apply sm:px-4;
+            @apply sm:py-2;
+            @apply border;
+            @apply border-sonolus-table;
+            @apply border-solid;
+        }
+    }
 }

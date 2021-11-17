@@ -21,6 +21,7 @@ module.exports = {
                 'sonolus-success': 'rgba(72, 199, 142, 1)',
                 'sonolus-warning': 'rgba(241, 70, 104, 1)',
                 'sonolus-code': 'rgba(255, 255, 255, 0.0625)',
+                'sonolus-table': 'rgba(255, 255, 255, 0.25)',
             },
         },
     },
