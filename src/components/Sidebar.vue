@@ -62,17 +62,18 @@
         </ul>
         <ul>
             <li
-                v-for="(pages, categoryTitle, i) in themeData.sidebar[
-                    pageData.lang
-                ]"
+                v-for="(category, i) in themeData.sidebar[pageData.lang]"
                 :key="i"
                 class="my-6"
             >
                 <div class="px-4 py-2 text-lg font-semibold">
-                    {{ categoryTitle }}
+                    {{ category.title }}
                 </div>
                 <ul>
-                    <li v-for="(pagePath, pageTitle, j) in pages" :key="j">
+                    <li
+                        v-for="(pageTitle, pagePath, j) in category.pages"
+                        :key="j"
+                    >
                         <RouterLink
                             class="
                                 block

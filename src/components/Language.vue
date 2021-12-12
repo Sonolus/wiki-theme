@@ -109,8 +109,6 @@ function replaceBasePath(path: string, from: string, to: string) {
 }
 
 function hasPage(sidebar: Sidebar, path: string) {
-    return Object.values(sidebar).some((category) =>
-        Object.values(category).includes(path)
-    )
+    return sidebar.some(({ pages }) => Object.keys(pages).includes(path))
 }
 </script>

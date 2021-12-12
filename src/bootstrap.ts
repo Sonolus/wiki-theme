@@ -3,6 +3,7 @@ import callsites from 'callsites'
 import { existsSync, readdirSync } from 'fs'
 import { PluginConfig, UserConfig } from 'vuepress'
 import { CodeConfig } from './components/code/types'
+import { Sidebar } from './types'
 
 const { resolve } = path
 
@@ -239,21 +240,16 @@ export function bootstrap(options: Partial<BootstrapOptions> = {}): UserConfig {
     }
 }
 
-function prefixPath(
-    sidebar: Record<string, Record<string, string>>,
-    path: string
-) {
-    return Object.fromEntries(
-        Object.entries(sidebar).map(([title, pages]) => [
-            title,
-            Object.fromEntries(
-                Object.entries(pages).map(([title, link]) => [
-                    title,
-                    path + link.slice(1),
-                ])
-            ),
-        ])
-    )
+function prefixPath(sidebar: Sidebar, path: string): Sidebar {
+    return sidebar.map(({ title, pages }) => ({
+        title,
+        pages: Object.fromEntries(
+            Object.entries(pages).map(([link, title]) => [
+                path + link.slice(1),
+                title,
+            ])
+        ),
+    }))
 }
 
 function getContainer(type: string): PluginConfig {

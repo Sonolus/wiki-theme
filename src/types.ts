@@ -6,9 +6,10 @@ declare module '@vuepress/shared/lib' {
     }
 }
 
-export type Category = Record<string, string>
-
-export type Sidebar = Record<string, Category>
+export type Sidebar = {
+    title: string
+    pages: Record<string, string>
+}[]
 
 export type ThemeData = {
     sidebar: Record<string, Sidebar>

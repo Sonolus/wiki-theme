@@ -30,7 +30,7 @@
                             hover:bg-sonolus-ui-button-highlighted
                             active:bg-sonolus-ui-button-pressed
                         "
-                        :to="nav.prev[1]"
+                        :to="nav.prev[0]"
                         @click="$emit('close')"
                     >
                         <img
@@ -43,7 +43,7 @@
                         <div
                             class="flex-grow mx-1 text-sm sm:mx-2 sm:text-base"
                         >
-                            {{ nav.prev[0] }}
+                            {{ nav.prev[1] }}
                         </div>
                     </RouterLink>
                     <div class="flex-grow" />
@@ -60,7 +60,7 @@
                             hover:bg-sonolus-ui-button-highlighted
                             active:bg-sonolus-ui-button-pressed
                         "
-                        :to="nav.next[1]"
+                        :to="nav.next[0]"
                         @click="$emit('close')"
                     >
                         <div
@@ -71,7 +71,7 @@
                                 sm:mx-2 sm:text-base
                             "
                         >
-                            {{ nav.next[0] }}
+                            {{ nav.next[1] }}
                         </div>
                         <img
                             class="w-auto h-5 sm:h-6"
@@ -107,9 +107,9 @@ const nav = computed(() => {
     const path = removeTrailing(pageData.value.path, '.html')
     const sidebar = themeData.value.sidebar[pageData.value.lang]
 
-    for (const category of Object.values(sidebar)) {
-        const entries = Object.entries(category)
-        const index = entries.findIndex((entry) => entry[1] === path)
+    for (const { pages } of sidebar) {
+        const entries = Object.entries(pages)
+        const index = entries.findIndex((entry) => entry[0] === path)
         if (index === -1) continue
 
         if (index > 0) {
