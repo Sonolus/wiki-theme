@@ -13,8 +13,9 @@
         @apply leading-tight;
         @apply font-semibold;
         @apply my-6;
+        @apply outline-none;
 
-        &:not(:focus):before {
+        &:before {
             content: ' ';
             @apply block;
             @apply invisible;
