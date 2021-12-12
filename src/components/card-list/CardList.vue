@@ -22,20 +22,15 @@
 </template>
 
 <script setup lang="ts">
-import { usePageData } from '@vuepress/client'
+import { usePageFrontmatter } from '@vuepress/client'
 import { computed } from 'vue'
-import { CardListConfig } from './types'
+import { Card } from './types'
 
 const props = defineProps<{
     category: string
 }>()
 
-const pageData = usePageData()
+const frontmatter = usePageFrontmatter()
 
-const cards = computed(
-    () =>
-        (pageData.value.frontmatter.cardList as CardListConfig | undefined)?.[
-            props.category
-        ]
-)
+const cards = computed(() => frontmatter.value[props.category] as Card[])
 </script>
