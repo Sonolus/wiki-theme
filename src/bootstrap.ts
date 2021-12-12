@@ -47,7 +47,7 @@ export function bootstrap(options: Partial<BootstrapOptions> = {}): UserConfig {
             if (existsSync(sidebarPath)) {
                 return [lang, prefixPath(require(sidebarPath), path)]
             } else {
-                return [lang, {}]
+                return [lang, []]
             }
         })
     )
