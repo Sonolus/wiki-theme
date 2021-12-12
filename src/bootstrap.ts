@@ -82,9 +82,11 @@ export function bootstrap(options: Partial<BootstrapOptions> = {}): UserConfig {
     const clientAppEnhanceFiles = [resolve(__dirname, './styles')]
 
     if (code) {
+        plugins.push(getContainer('Code'))
         clientAppEnhanceFiles.push(resolve(__dirname, './components/code'))
     }
     if (cardList) {
+        plugins.push(getContainer('CardList'))
         clientAppEnhanceFiles.push(resolve(__dirname, './components/card-list'))
     }
 
@@ -252,4 +254,15 @@ function prefixPath(
             ),
         ])
     )
+}
+
+function getContainer(type: string): PluginConfig {
+    return [
+        '@vuepress/plugin-container',
+        {
+            type,
+            before: (info: string) => `<${type} ${info}>\n`,
+            after: () => `</${type}>\n`,
+        },
+    ]
 }
