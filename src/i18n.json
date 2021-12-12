@@ -49,6 +49,16 @@
             "home": "홈"
         }
     },
+    "es": {
+        "nav": {
+            "player": "Jugador",
+            "developer": "Desarrollador"
+        },
+        "notFound": {
+            "description": "La página que estás buscando no está aquí.",
+            "home": "Inicio"
+        }
+    },
     "id": {
         "nav": {
             "player": "Pemain",
