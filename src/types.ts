@@ -12,6 +12,4 @@ export type Sidebar = Record<string, Category>
 
 export type ThemeData = {
     sidebar: Record<string, Sidebar>
-
-    code: CodeConfig
-}
+} & CodeConfig

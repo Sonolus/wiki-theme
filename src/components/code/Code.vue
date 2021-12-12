@@ -48,7 +48,7 @@
 </template>
 
 <script setup lang="ts">
-import { usePageData } from '@vuepress/client'
+import { usePageFrontmatter } from '@vuepress/client'
 import { computed, ref, watch } from 'vue'
 import { useThemeData } from '../../composables/theme-data'
 import { useCodeLanguage } from './language'
@@ -60,19 +60,15 @@ const props = defineProps<{
     pathParams?: string[][]
 }>()
 
-const pageData = usePageData()
 const themeData = useThemeData()
 const codeLanguage = useCodeLanguage()
-
-const codeFrontmatter = computed(
-    () => pageData.value.frontmatter.code as CodeConfig | undefined
-)
+const frontmatter = usePageFrontmatter<CodeConfig>()
 
 const languages = computed(
     () =>
         props.languages ||
-        codeFrontmatter.value?.languages ||
-        themeData.value.code.languages ||
+        frontmatter.value.codeLanguages ||
+        themeData.value.codeLanguages ||
         []
 )
 
@@ -90,16 +86,16 @@ watch(
 const paths = computed(() => {
     const template = [
         props.pathTemplate,
-        codeFrontmatter.value?.path?.template,
-        themeData.value.code.path?.template,
+        frontmatter.value.codePathTemplate,
+        themeData.value.codePathTemplate,
     ]
         .filter((value): value is string => value != undefined)
         .reduce((sum, current) => replaceAll(sum, '\\{0\\}', current), '{0}')
 
     const params =
         props.pathParams ||
-        codeFrontmatter.value?.path?.params ||
-        themeData.value.code?.path?.params ||
+        frontmatter.value.codePathParams ||
+        themeData.value.codePathParams ||
         []
 
     return languages.value.map((_, i) =>

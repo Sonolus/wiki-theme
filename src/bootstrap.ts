@@ -64,7 +64,7 @@ export function bootstrap(options: Partial<BootstrapOptions> = {}): UserConfig {
             {
                 themeData: {
                     sidebar,
-                    code,
+                    ...code,
                 },
             },
         ],
