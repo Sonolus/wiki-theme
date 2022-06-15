@@ -68,5 +68,15 @@
             "description": "Halaman yang Anda cari tidak ada disini.",
             "home": "Halaman Utama"
         }
+    },
+    "vi": {
+        "nav": {
+            "player": "Dành cho người chơi",
+            "developer": "Dành cho nhà phát triển"
+        },
+        "notFound": {
+            "description": "Trang mà bạn đang tìm hiện không có ở đây.",
+            "home": "Trang chủ"
+        }
     }
 }
