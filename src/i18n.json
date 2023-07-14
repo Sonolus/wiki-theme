@@ -88,25 +88,5 @@
             "description": "Die Seite, nach der du suchst, existiert nicht.",
             "home": "Startseite"
         }
-    },
-    "ru": {
-        "nav": {
-            "player": "Player",
-            "developer": "Developer"
-        },
-        "notFound": {
-            "description": "The page you are looking for is not here.",
-            "home": "Home"
-        }
-    },
-    "fr": {
-        "nav": {
-            "player": "Player",
-            "developer": "Developer"
-        },
-        "notFound": {
-            "description": "The page you are looking for is not here.",
-            "home": "Home"
-        }
     }
 }

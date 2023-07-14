@@ -5,5 +5,5 @@ import i18n from '../i18n.json'
 export function useI18n() {
     const siteLocaleData = useSiteLocaleData()
 
-    return computed(() => i18n[siteLocaleData.value.lang])
+    return computed(() => i18n[siteLocaleData.value.lang] ?? i18n['en'])
 }
