@@ -88,5 +88,35 @@
             "description": "Die Seite, nach der du suchst, existiert nicht.",
             "home": "Startseite"
         }
+    },
+    "el": {
+        "nav": {
+            "player": "Παίκτης",
+            "developer": "Δημιουργός"
+        },
+        "notFound": {
+            "description": "Η σελίδα που ψάχνετε δεν είναι εδώ.",
+            "home": "Αρχική σελίδα"
+        }
+    },
+    "fr": {
+        "nav": {
+            "player": "Joueur",
+            "developer": "Développeur"
+        },
+        "notFound": {
+            "description": "La page que vouz voulez chercher n'est pas ici.",
+            "home": "Menu Principal"
+        }
+    },
+    "ru": {
+        "nav": {
+            "player": "Игрок",
+            "developer": "Разработчик"
+        },
+        "notFound": {
+            "description": "Страница которую вы ищете не здесь.",
+            "home": "Домой"
+        }
     }
 }
